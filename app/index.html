@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buteyko</title>
+    <link rel="stylesheet" href="vendor.css" type="text/css"/>
+
+    <script src="vendor.js"></script>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+
+    	<div class="row">
+    		<div id="focusBox" class="col-xs-12">
+
+    		</div>
+    		
+    		
+    	</div>
+    	<div id="workflow" class="row">
+    		<div class="col-sm-1 border col-xs-12">Heart</div>
+    		<div class="col-sm-1 border col-xs-12">CP</div>
+    		<div class="col-sm-1 border col-xs-12">5 min</div>
+    		<div class="col-sm-1 border col-xs-12">CP</div>
+    		<div class="col-sm-1 border col-xs-12">5 min</div>
+    		<div class="col-sm-1 border col-xs-12">CP</div>
+    		<div class="col-sm-1 border col-xs-12">5 min</div>
+    		<div class="col-sm-1 border col-xs-12">CP</div>
+    		<div class="col-sm-1 border col-xs-12">5 min</div>
+    		<div class="col-sm-1 border col-xs-12">CP</div>
+    		<div class="col-sm-1 border col-xs-12">Heart</div>
+    		<div class="col-sm-1 border col-xs-12">Note</div>
+
+    	</row>
+
+
+
+    </div>
+
+    <!-- @IF ENV="DEV" -->
+    <script>
+    	(function () {
+                var ws = new WebSocket("ws://localhost:8000");
+                ws.onmessage = function (e) {
+                    location.reload(true);
+                };
+            })();
+    </script>
+
+    <!-- @endif-->
+</body>
+</html>
